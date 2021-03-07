@@ -160,7 +160,10 @@ extension SpinningWheelAnimator: CAAnimationDelegate {
         if let completionBlock = self.completionBlock,
            let animId = anim.value(forKey: "animId") as? String, animId == "rotation" {
             completionBlock(flag)
-            self.completionBlock = nil
+            if flag {
+                self.completionBlock = nil
+            }
+            
         }
         startedAnimationCount -= 1
         if startedAnimationCount < 1 {
