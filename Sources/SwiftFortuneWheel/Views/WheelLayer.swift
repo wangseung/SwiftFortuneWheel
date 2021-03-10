@@ -89,7 +89,7 @@ class WheelLayer: CALayer {
         //// Slice drawings
         let startPositionOffsetDegree = preferences?.startPosition.startAngleOffset ?? 0
         let offSetDegree: CGFloat = (sliceDegree / 2)
-        var rotation:CGFloat = -sliceDegree + startPositionOffsetDegree
+        var rotation:CGFloat = -sliceDegree + startPositionOffsetDegree + offSetDegree
         let start:CGFloat = -offSetDegree
         let end = sliceDegree - offSetDegree
         
